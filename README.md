@@ -1,5 +1,7 @@
 Descrição
-PACIFY
+Título: PACIFY
+Projeto no ar: https://basiliohadnan.github.io/PACIFY-TaskList/
+
 Este projeto tem como objetivo a apresentação de uma tabela de organização de tarefas simples.
 Sendo possível: listagem, adição, remoção e filtragem de itens.
 

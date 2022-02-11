@@ -10,7 +10,6 @@ btnAddTask.addEventListener("click", (e) => {
         showErrorMessage(errorList)
         return
     }
-
     addTask(task)
     form.reset()
     var errorList = document.querySelector("#error-messages")
@@ -83,21 +82,21 @@ function createTd(value, _class) {
 }
 
 function addTask(task) {
-    if (!validateTask(task)) return
+    if (!validateTask(task))
+        return
     
     var taskTr = createTr(task)
     var table = getTaskTable()
     table.appendChild(taskTr)
 }
 
-function getTaskTable() {
-    var table = document.querySelector("#task-table")
-    return table
-}
+getTaskTable = () =>
+    document.querySelector("#task-table")
 
 function validateTask(task) {
     var errorList = []
-    if (task.description.length == 0) errorList.push("Insira uma descrição válida!")
+    if (task.description.length == 0)
+        errorList.push("Insira uma descrição válida!")
     return errorList
 }
 
