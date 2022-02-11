@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Pacify | Início (:</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+	<body>
+		<header class="header">
+			<img class="header-logo" src="img/logo.png">
+			<nav>
+				<ul>
+					<li><a href="index.html">Tarefas</a></li>
+					<li><a href="about.html">Sobre</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="add-task-section">
+				<h2 class="greetings-message">Nova tarefa</h2>
+				<div id="add-task"> 
+					<ul id="error-messages"></ul>
+					<form id="task-form" class="task-form">
+						<label for="form-input-task">Ação</label>
+						<input placeholder="Ex: lavar roupas" id="description" type="text" maxlength="25" class="form-input-task" required>
+						<p>Categoria</p>
+						<select id="label">
+							<option>Casa</option>
+							<option>Ego</option>
+							<option>Financeiro</option>
+							<option>Relacionamentos</option>
+							<option>Outros</option>
+						</select>
+						<div>
+							<p class="priority">Prioridade</p>
+							<select id="priority" class="priority-select">
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+							<label for="form-due-date">Prazo</label>
+							<input id="duedate" type="date" class="form-due-date" min="2022-02-01" value="2022-02-15">
+						</div>
+						<div>
+							<label id="label-linkedpeople" for="form-linkedpeople">Envolvidos</label>
+							<input placeholder="Fulano" id="dependencies" type="text" maxlength="25" class="form-linkedpeople">
+							<label aria-label="label-externalurl" for="form-url">Referência</label>
+							<input placeholder="http://www.site.com" id="externalurl" type="url" class="form-url">
+						</div>
+						<button type="submit" id="btn-add-task" class="form-addtask-button">Adicionar</button>
+					</form>
+				</div>
+			</section>
+			<section id="task-table-section">
+				<h2 class="greetings-message">Tarefas pendentes</h2>
+				<label for="filter-table"></label>
+				<input type="text" name="filter" id="filter-table" placeholder="Digite algo para filtrar">
+					<table>
+						<thead>
+							<tr>
+								<th>Tarefa</th>
+								<th>Categoria</th>
+								<th>Prioridade</th>
+								<th>Prazo</th>
+								<th>Envolvidos</th>
+								<th>Referência</th>
+							</tr>
+						</thead>
+						<tbody id="task-table">
+							<tr class="task-item">
+								<td class="task-description">Lavar roupas</td>
+								<td class="task-label">Casa</td>
+								<td class="task-priority">3</td>
+								<td class="task-duedate">2022-05-04</td>
+								<td class="task-dependencies">n/a</td>
+								<td class="task-externalurl">n/a</td>
+							</tr>
+						</tbody>
+					</table>
+			</section>
+		</main>
+		<footer id="footer">
+			<img id="footer-logo" src="../img/logo.png" alt="Logo">
+			<p class="copyright">&copy; Hadnan Basilio | 1984</p>
+		</footer>	
+	</body>
+	<script src="js/index.js"></script>
+</html>

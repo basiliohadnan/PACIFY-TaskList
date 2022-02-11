@@ -1,0 +1,14 @@
+{
+  "name": "sprint-1",
+  "version": "1.0.0",
+  "description": "Pacify: tabela de organização de tarefas simples.",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

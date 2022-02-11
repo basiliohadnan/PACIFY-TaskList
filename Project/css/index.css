@@ -1,0 +1,263 @@
+:root {
+    /* Color refs
+     https://colorhunt.co/palette/1572a19ad0ecefdad7e3bec6 */
+
+    --pink: #E3BEC6;
+    --darkpink: #EFDAD7;
+    --blue: #9AD0EC;
+    --darkblue: #1572A1;
+    --darkgray: #C8C6C6;
+    --lightgray: #F7F6F2;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.invisible {
+    display: none;
+}
+
+.fadeOut {
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.header {
+    color: #FFFFFF;
+    background: var(--blue);
+    padding-bottom: 1rem;
+    height: 5rem;
+    width: 100%;
+}
+
+    .header-logo {
+    height: inherit;
+}
+
+nav {
+    position: absolute;
+    top: 3.75rem;
+    right: 1.25rem;
+}
+
+nav li {
+    display: inline-block;
+    padding-left: 1rem;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--pink);
+}
+
+section {
+    margin-left: 0.7rem;
+}
+
+.greetings-message {
+    color: #FFFFFF;
+    background-color: var(--pink);
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border-color: var(--darkpink);
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#filter-table {
+	width: 15rem;
+	height: 1.5rem;
+	margin-bottom: 1rem;
+    display: block;
+}
+
+.add-task-section {
+    border-bottom: 0.063rem solid var(--darkgray);
+    margin-top: 0.7rem;
+}
+
+#btn-add-task {
+    display: block;
+    margin: 0.625rem 0 0.313rem 0.313rem;
+    width: 20%;
+    padding: 0.938rem 0;
+    background: var(--blue);
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 0.313rem;
+    transition: 1s all;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+#btn-add-task:hover {
+    color: #000000;
+    background: var(--pink);
+    transform: scale(1.02);
+} 
+
+section h2 {
+	font-size: 3rem;
+	display: block;
+	padding-bottom: .5rem;
+	border-bottom: 0.063rem solid var(--blue);
+	margin-bottom: .5rem;
+}
+
+#error-messages {
+    color: #FF0000;
+}
+
+table {
+    display: inline-block;
+    max-width: 100vw;
+}
+
+td {
+    word-break: break-all;
+}
+
+td, th {
+	padding: 0.7rem;
+	margin: 0;
+	border: 0.063rem solid var(--lightgray);
+	text-align: center;
+}
+
+th{
+	font-weight: bold;
+    color: var(--white);
+	background-color: var(--blue);
+}
+
+#add-task {
+    max-width: 100vw;
+}
+
+#task-form p, input, label, select {
+	color: #000000;
+	display: inline-block;
+	margin: 0.2em;
+}
+
+#about-container {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+#about-title, #about-email {
+    margin-top: 2rem;
+}
+
+#about-profilepic{
+    max-width: 18rem;
+    margin-top: 2rem;
+    border: solid 0.188rem var(--darkpink);
+    border-radius: 0.313rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about-externalurl {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    text-align: center;
+    width: 20%;
+    padding: 0.938rem 0;
+    background: var(--blue);
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.25rem;
+    transition: 1s all;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#about-externalurl:hover {
+    color: #000000;
+    background: var(--pink);
+    transform: scale(1.02);}
+
+#footer {
+    text-align: center;
+    position: absolute;
+    bottom:0;
+    width:100%;
+    height: 3.75rem;
+    background-color: var(--darkpink);
+ }
+
+#footer-logo {
+    opacity: 50%;
+    max-height: 2.5rem;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 0.75rem;
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        font-size: 0.6rem;
+    }
+
+    .header {
+        height: 7rem;
+    }
+    
+    .header-logo {
+        height: inherit;
+    }
+
+    nav a {
+        font-size: 1.5rem;
+    }
+
+    #task-form p, input, label, select {
+        color: #000000;
+        display: inline-block;
+        max-width: 34%;
+        margin: 0.2em;
+    }
+
+    .select-input {
+        color: #000000;
+        display: inline-block;
+        max-width: 34%;
+        margin: 0.2em;
+    }
+
+    #label-linkedpeople, #dependencies{
+        max-width: 25%;
+    }
+
+    #btn-add-task {
+        margin-top: 0.7rem;
+        margin-left: 0;
+        width: 50%;
+    }
+
+    #footer {
+        height: 5.75rem;
+     }
+
+    #footer-logo {
+        max-height: 4.5rem;
+    }
+}
